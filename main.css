@@ -154,6 +154,9 @@ button:nth-child(5) {
 button:nth-child(6) {
     font-size: 15px;
 }
+button:focus{
+    outline: none;
+}
 #playlist {
     background-color: white;
     width: 100%;
