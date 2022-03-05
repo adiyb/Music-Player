@@ -107,9 +107,9 @@ function timeCalculation(a){
 /* ------------------------- */
 
 function posterChanger(a){
-    poster.style.backgroundImage = `url(../assets/images/${a+1}.jpg)`;
-    playlistPoster.style.backgroundImage = `url(../assets/images/${a+1}.jpg)`;
-    cover.style.backgroundImage = `url(../assets/images/${a+1}.jpg)`;
+    poster.style.backgroundImage = `url(./assets/images/${a+1}.jpg)`;
+    playlistPoster.style.backgroundImage = `url(./assets/images/${a+1}.jpg)`;
+    cover.style.backgroundImage = `url(./assets/images/${a+1}.jpg)`;
 };
 
 /* ------------------------ */
