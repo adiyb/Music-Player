@@ -15,7 +15,6 @@ let forward = document.querySelector(".fa-forward");
 let forwardStep = document.querySelector(".fa-forward-step");
 let shuffle = document.querySelector(".fa-shuffle");
 let loop = document.querySelector(".fa-repeat");
-let bacwardStep = document.querySelector(".fa-backward-step");
 let up = document.getElementById("up-button");
 let down = document.getElementById("down-button");
 let cover = document.getElementById("cover");

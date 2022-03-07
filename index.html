@@ -1,116 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="./main.css">
-    <script src="./main.js" defer></script>
-</head>
-<body>
-    <div id="player">
-        <div id="screen">
-            <div id="disk">
-                <div id="poster"></div>
-            </div>
-            <p class="title">Please choose a song first</p>
-            <p class="author">From playlist</p>
-        </div>
-        <div id="playbar">
-            <div id="progress">
-                <div id="progress-outer">
-                    <div id="progress-inner">
-                        <div id="point"></div>
-                    </div>
-                </div>
-                <span id="played-time">00:00</span>
-                <span id="total-time">00:00</span>
-            </div>
-        </div>
-        <div id="controls">
-            <button class="fa-solid fa-backward-step"></button>
-            <button class="fa-solid fa-backward"></button>
-            <button id="play-pause" class="fa-solid fa-circle-play"></button>
-            <button class="fa-solid fa-circle-stop"></button>
-            <button class="fa-solid fa-forward"></button>
-            <button class="fa-solid fa-forward-step"></button>
-            <button class="fa-solid fa-repeat"></button>
-            <button class="fa-solid fa-shuffle"></button>
-        </div>
-        <span id="up-button" class="fa-solid fa-angle-up"></span>
-        <div id="playlist">
-            <div id="details">
-                <div id="cover-container">
-                    <div id="playlist-disk">
-                        <div id="playlist-poster"></div>
-                    </div>
-                    <div id="cover"></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Music Player</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./main.css" />
+    </head>
+    <body>
+        <div id="player">
+            <div id="screen">
+                <div id="disk">
+                    <div id="poster"></div>
                 </div>
                 <p class="title">Please choose a song first</p>
                 <p class="author">From playlist</p>
-                <div id="overlay"></div>
             </div>
-            <div id="songs">
-                <div class="audio-wrapper">
-                    <div class="song-details">
-                        <p class="song-title">Bad Habbits</p>
-                        <p class="song-author">Ed Sheeran</p>
+            <div id="playbar">
+                <div id="progress">
+                    <div id="progress-outer">
+                        <div id="progress-inner">
+                            <div id="point"></div>
+                        </div>
                     </div>
-                    <span id="total-time">04:01</span>
-                    <audio src="./assets/musics/Bad Habits.mp3"  preload="metadata"></audio>
-                </div>
-                <div class="audio-wrapper">
-                    <div class="song-details">
-                        <p class="song-title">Boss</p>
-                        <p class="song-author">Doja Cat</p>
-                    </div>
-                    <span id="total-time">02:14</span>
-                    <audio src="./assets/musics/Boss.mp3"  preload="metadata"></audio>
-                </div>
-                <div class="audio-wrapper">
-                    <div class="song-details">
-                        <p class="song-title">Levitating</p>
-                        <p class="song-author">Dua Lips</p>
-                    </div>
-                    <span id="total-time">03:41</span>
-                    <audio src="./assets/musics/Levitating.mp3" preload="metadata"></audio>
-                </div>
-                <div class="audio-wrapper">
-                    <div class="song-details">
-                        <p class="song-title">Blue Skies</p>
-                        <p class="song-author">Birdy</p>
-                    </div>
-                    <span id="total-time">02:35</span>
-                    <audio src="./assets/musics/Blue Skies.mp3" preload="metadata"></audio>
-                </div>
-                <div class="audio-wrapper">
-                    <div class="song-details">
-                        <p class="song-title">WAP</p>
-                        <p class="song-author">Cardi B</p>
-                    </div>
-                    <span id="total-time">03:08</span>
-                    <audio src="./assets/musics/WAP.mp3" preload="metadata"></audio>
-                </div>
-                <div class="audio-wrapper">
-                    <div class="song-details">
-                        <p class="song-title">Kiss Me More</p>
-                        <p class="song-author">Doja Cat</p>
-                    </div>
-                    <span id="total-time">03:29</span>
-                    <audio src="./assets/musics/Kiss Me More.mp3" preload="metadata"></audio>
-                </div>
-                <div class="audio-wrapper">
-                    <div class="song-details">
-                        <p class="song-title">Therefore I Am</p>
-                        <p class="song-author">Bilie Eilish</p>
-                    </div>
-                    <span id="total-time">02:54</span>
-                    <audio src="./assets/musics/Therefore I Am.mp3" preload="metadata"></audio>
+                    <span id="played-time">00:00</span>
+                    <span id="total-time">00:00</span>
                 </div>
             </div>
-            <div id="down-button" class="fa-solid fa-angle-down"></div>
+            <div id="controls">
+                <button class="fa-solid fa-backward-step"></button>
+                <button class="fa-solid fa-backward"></button>
+                <button
+                    id="play-pause"
+                    class="fa-solid fa-circle-play"
+                ></button>
+                <button class="fa-solid fa-circle-stop"></button>
+                <button class="fa-solid fa-forward"></button>
+                <button class="fa-solid fa-forward-step"></button>
+                <button class="fa-solid fa-repeat"></button>
+                <button class="fa-solid fa-shuffle"></button>
+            </div>
+            <span id="up-button" class="fa-solid fa-angle-up"></span>
+            <div id="playlist">
+                <div id="details">
+                    <div id="cover-container">
+                        <div id="playlist-disk">
+                            <div id="playlist-poster"></div>
+                        </div>
+                        <div id="cover"></div>
+                    </div>
+                    <p class="title">Please choose a song first</p>
+                    <p class="author">From playlist</p>
+                    <div id="overlay"></div>
+                </div>
+                <div id="songs">
+                    <div class="audio-wrapper">
+                        <div class="song-details">
+                            <p class="song-title">Bad Habbits</p>
+                            <p class="song-author">Ed Sheeran</p>
+                        </div>
+                        <span id="total-time">04:01</span>
+                        <audio
+                            preload="metadata"
+                        ></audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <div class="song-details">
+                            <p class="song-title">Boss</p>
+                            <p class="song-author">Doja Cat</p>
+                        </div>
+                        <span id="total-time">02:14</span>
+                        <audio
+                            preload="metadata"
+                        ></audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <div class="song-details">
+                            <p class="song-title">Levitating</p>
+                            <p class="song-author">Dua Lips</p>
+                        </div>
+                        <span id="total-time">03:41</span>
+                        <audio
+                            preload="metadata"
+                        ></audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <div class="song-details">
+                            <p class="song-title">Blue Skies</p>
+                            <p class="song-author">Birdy</p>
+                        </div>
+                        <span id="total-time">02:35</span>
+                        <audio
+                            preload="metadata"
+                        ></audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <div class="song-details">
+                            <p class="song-title">WAP</p>
+                            <p class="song-author">Cardi B</p>
+                        </div>
+                        <span id="total-time">03:08</span>
+                        <audio
+                            preload="metadata"
+                        ></audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <div class="song-details">
+                            <p class="song-title">Kiss Me More</p>
+                            <p class="song-author">Doja Cat</p>
+                        </div>
+                        <span id="total-time">03:29</span>
+                        <audio
+                            preload="metadata"
+                        ></audio>
+                    </div>
+                    <div class="audio-wrapper">
+                        <div class="song-details">
+                            <p class="song-title">Therefore I Am</p>
+                            <p class="song-author">Bilie Eilish</p>
+                        </div>
+                        <span id="total-time">02:54</span>
+                        <audio
+                            preload="metadata"
+                        ></audio>
+                    </div>
+                </div>
+                <div id="down-button" class="fa-solid fa-angle-down"></div>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
+
+    <!-- ----------------------- -->
+
+    <script type="module" src="storage.js"></script>
+    <script type="module" src="./main.js"></script>
 </html>
